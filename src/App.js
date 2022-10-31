@@ -1,12 +1,12 @@
 import "./App.css";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { UserContext } from "./Context/UserContext";
-import SignIn from "./Components/SignIn";
-import Header from "./Components/Header";
-import Navigator from "./Components/Navigator";
-import Home from "./Components/Home";
-import Articles from "./Components/Articles";
+import { UserContext } from "./context/UserContext";
+import SignIn from "./components/SignIn";
+import Header from "./components/Header";
+import Navigator from "./components/Navigator";
+import Home from "./components/Home";
+import Articles from "./components/Articles";
 
 function App() {
   const [user, setUser] = useState(null);
