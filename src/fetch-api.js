@@ -21,3 +21,9 @@ export const fetchArticles = () => {
     return res.data
   })
 }
+
+export const fetchTopics = () => {
+  return myApi.get("/topics").then((res) => {
+    return res.data
+  })
+}
