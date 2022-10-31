@@ -2,6 +2,47 @@
   text-align: center;
 }
 
+h1 {
+  font-weight: bolder;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h3 {
+  font-style: italic;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
 .nav {
-  display: block
+  display: block;
+}
+
+.ArticleCard {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  border-width: 1px;
+  border-style: dotted;
+}
+
+.ArticleCard h3 {
+  text-decoration: underline;
+}
+
+.Article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.Article p {
+  border: 2px solid rgb(79, 185, 227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
