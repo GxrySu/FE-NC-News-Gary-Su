@@ -15,7 +15,7 @@ const Topics = () => {
   }, []);
 
   return (
-    <div>
+    <div className="TopicsBlock">
       <h2>List of Topics</h2>
       <>
         {isLoading ? (
@@ -23,7 +23,7 @@ const Topics = () => {
         ) : (
           topics.map((topic) => {
             return (
-              <div key={topic.slug}>
+              <div className="TopicsCard"key={topic.slug}>
                 <Link to={`/topics/${topic.slug}`}>
                   <h3>
                     {topic.slug.charAt(0).toUpperCase() + topic.slug.slice(1)}
