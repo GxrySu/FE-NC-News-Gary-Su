@@ -4,9 +4,9 @@ const myApi = axios.create({
   baseURL: "https://nc-news-garys.herokuapp.com/api",
 });
 
-export const fetchApi = () => {
+export const fetchEndpoints = () => {
   return myApi.get("/").then((res) => {
-    return res.data;
+    return res.data.api;
   });
 };
 

@@ -14,19 +14,20 @@ function App() {
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ user, setUser }}>
-        <div className="App"></div>
-        {user === null ? (
-          <SignIn />
-        ) : (
-          <>
-            <Header />
-            <Navigator />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/articles" element={<Articles />} />
-            </Routes>
-          </>
-        )}
+        <div className="App">
+          {user === null ? (
+            <SignIn />
+          ) : (
+            <>
+              <Header />
+              <Navigator />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/articles" element={<Articles />} />
+              </Routes>
+            </>
+          )}
+        </div>
       </UserContext.Provider>
     </BrowserRouter>
   );
