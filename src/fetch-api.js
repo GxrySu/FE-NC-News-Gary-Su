@@ -15,3 +15,9 @@ export const fetchUsers = () => {
     return res.data;
   });
 };
+
+export const fetchArticles = () => {
+  return myApi.get("/articles").then((res) => {
+    return res.data
+  })
+}
