@@ -18,12 +18,18 @@ export const fetchUsers = () => {
 
 export const fetchArticles = () => {
   return myApi.get("/articles").then((res) => {
-    return res.data
-  })
-}
+    return res.data;
+  });
+};
 
 export const fetchTopics = () => {
   return myApi.get("/topics").then((res) => {
-    return res.data
-  })
-}
+    return res.data;
+  });
+};
+
+export const fetchArticleById = (article_id) => {
+  return myApi.get(`/articles/${article_id}`).then((res) => {
+    return res.data;
+  });
+};
