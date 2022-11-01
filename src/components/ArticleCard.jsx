@@ -33,7 +33,7 @@ const ArticleCard = ({ article }) => {
           Author: <span>{author}</span>
         </p>
         <p>Date: {myDate}</p>
-        <ul className="VoteWrapper">
+        <ul className="VoteWrapper-ArticleCard">
           <li className="Vote-Button" onClick={handleVote}>
             <span className="Vote-Tooltip">{voteStatus}</span>
             <span>
