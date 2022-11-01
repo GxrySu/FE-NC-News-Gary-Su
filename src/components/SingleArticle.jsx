@@ -19,20 +19,21 @@ const SingleArticle = () => {
     article;
 
   return (
-    <div>
+    <div className='SingleArticle'>
       {isLoading ? (
         <h2>Loading Article...</h2>
       ) : (
-        <main className='Article'>
+        <article className='Article'>
           <h2>{title}</h2>
           <br />
           <p>Article ID: {article_id}</p>
           <p>Author: {author}</p>
           <p>Topic: {topic.charAt(0).toUpperCase() + topic.slice(1)}</p>
-          <p>{body}</p>
+          <main>{body}</main>
           <p>Comments: {comment_count} </p>
-          <p>Date Created: {created_at.substring(0, 10)}</p>
-        </main>
+          <p className="Article-Votes">Votes: {votes}</p>
+          <p className="Article-Date">Date Created: {created_at.substring(0, 10)}</p>
+        </article>
       )}
     </div>
   );
