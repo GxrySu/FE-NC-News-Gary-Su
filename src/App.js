@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Articles from "./components/Articles";
 import Topics from "./components/Topics";
 import ArticlesByTopic from "./components/ArticlesByTopic";
+import SingleArticle from "./components/SingleArticle";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -30,6 +31,10 @@ function App() {
                 <Route
                   path="/topics/:topic"
                   element={<ArticlesByTopic />}
+                ></Route>
+                <Route
+                  path="/articles/:article_id"
+                  element={<SingleArticle />}
                 ></Route>
               </Routes>
             </>
