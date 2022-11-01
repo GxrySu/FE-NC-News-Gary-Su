@@ -5,13 +5,18 @@ import { patchVotes } from "../fetch-api";
 const ArticleCard = ({ article }) => {
   const { article_id, author, created_at, title, topic, votes } = article;
   const [incVotes, setIncVotes] = useState(0);
+  const [voteStatus, setVoteStatus] =useState('Like')
 
   const handleVote = () => {
-    setIncVotes((curr) => curr + 1);
-    patchVotes(article_id).catch((err) => {
-      console.log(err);
+    if (incVotes === 0) {
+      setIncVotes((curr) => curr + 1);
+      patchVotes(article_id);
+      setVoteStatus('Liked!!!')
+    } else {
       setIncVotes((curr) => curr - 1);
-    });
+      patchVotes(article_id);
+      setVoteStatus('Like')
+    }
   };
 
   const myTopic = topic.charAt(0).toUpperCase() + topic.slice(1);
@@ -29,12 +34,8 @@ const ArticleCard = ({ article }) => {
         </p>
         <p>Date: {myDate}</p>
         <ul className="VoteWrapper">
-          <li
-            className="Vote-Button"
-            disabled={incVotes !== 0}
-            onClick={handleVote}
-          >
-            <span className="Vote-Tooltip">Like</span>
+          <li className="Vote-Button" onClick={handleVote}>
+            <span className="Vote-Tooltip">{voteStatus}</span>
             <span>
               <i className="Like-Button">{votes + incVotes}✔</i>
             </span>
