@@ -7,7 +7,7 @@ const ArticleCard = ({ article }) => {
 
   return (
     <section className="ArticleCard">
-      <Link to={`/articles/${article_id}`}><h3>{title}</h3></Link>
+      <Link className="ArticleLink"to={`/articles/${article_id}`}><h3>{title}</h3></Link>
       <div className="Articles">
         <p>Topic: {myTopic}</p>
         <p>
