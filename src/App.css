@@ -58,7 +58,7 @@ h3 {
   text-decoration: underline;
 }
 
-.Article {
+.Articles {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 700px;
@@ -67,7 +67,7 @@ h3 {
   gap: 10px;
 }
 
-.Article p {
+.Articles p {
   border: 2px solid rgb(79, 185, 227);
   padding: 10px;
   margin: 10px;
