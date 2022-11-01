@@ -5,7 +5,7 @@ const Navigator = () => {
     <nav className="nav">
       <ul>
         <Link className='NavLink'to="/">
-          <li><a>Home</a></li>
+          <li>Home</li>
         </Link>
         <Link className='NavLink'to="/articles">
           <li>Articles</li>
