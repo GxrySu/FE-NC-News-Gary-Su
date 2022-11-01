@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchArticleById } from "../fetch-api";
+import { fetchArticleById, fetchCommentsByArticleId } from "../fetch-api";
 import { patchVotes } from "../fetch-api";
 
 const SingleArticle = () => {
   const { article_id } = useParams();
   const [article, setArticle] = useState({});
+  const [comment, setComment] = useState({})
   const [isLoading, setIsLoading] = useState(true);
   const [voteStatus, setVoteStatus] = useState("Like");
   const [incVotes, setIncVotes] = useState(0);
@@ -16,7 +17,13 @@ const SingleArticle = () => {
       setArticle(articleData);
       setIsLoading(false);
     });
+    fetchCommentsByArticleId(article_id).then((commentData) => {
+      setComment(commentData)
+      setIsLoading(false)
+    })
   }, [article_id]);
+
+  console.log(comment)
 
   const { author, body, comment_count, created_at, title, topic, votes } =
     article;
