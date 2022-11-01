@@ -29,7 +29,7 @@ const ArticlesByTopic = () => {
         filteredArticles.map((article) => {
           return (
             <div>
-              <Link className="Articles-By-Topic" to={`/articles/${article.article_id}`}><h3>{article.title}</h3></Link>
+              <Link className="ArticleLink" to={`/articles/${article.article_id}`}><h3>{article.title}</h3></Link>
               <p>Topic: {myTopic}</p>
               <p>
                 Author: <span>{article.author}</span>

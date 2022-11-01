@@ -24,7 +24,7 @@ const Topics = () => {
           topics.map((topic) => {
             return (
               <div className="TopicsCard"key={topic.slug}>
-                <Link to={`/topics/${topic.slug}`}>
+                <Link className="ArticleLink" to={`/topics/${topic.slug}`}>
                   <h3>
                     {topic.slug.charAt(0).toUpperCase() + topic.slug.slice(1)}
                   </h3>
