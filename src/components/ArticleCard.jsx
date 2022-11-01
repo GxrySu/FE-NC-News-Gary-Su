@@ -1,11 +1,14 @@
+import { Link } from 'react-router-dom'
+
 const ArticleCard = ({ article }) => {
-  const { author, created_at, title, topic } = article;
+  console.log(article)
+  const { article_id, author, created_at, title, topic } = article;
   const myTopic = topic.charAt(0).toUpperCase() + topic.slice(1);
   const myDate = created_at.substring(0, 10);
 
   return (
     <section className="ArticleCard">
-      <h3>{title}</h3>
+      <Link to={`/articles/${article_id}`}><h3>{title}</h3></Link>
       <div className="Article">
         <p>Topic: {myTopic}</p>
         <p>
