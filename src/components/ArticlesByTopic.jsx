@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchArticles } from "../fetch-api";
 
@@ -29,7 +29,7 @@ const ArticlesByTopic = () => {
         filteredArticles.map((article) => {
           return (
             <div>
-              <h3>{article.title}</h3>
+              <Link className="ArticleLink" to={`/articles/${article.article_id}`}><h3>{article.title}</h3></Link>
               <p>Topic: {myTopic}</p>
               <p>
                 Author: <span>{article.author}</span>
