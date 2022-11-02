@@ -264,3 +264,98 @@ h3 {
   margin: 10px;
   float: right;
 }
+
+.Articles-SortBy,
+.Articles-SortBy * {
+  margin: 5px;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.Articles-SortBy {
+  position: relative;
+  margin: auto 40% auto 40%;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+}
+
+.Articles-SortBy select {
+  font-size: 1rem;
+  font-weight: normal;
+  max-width: 100%;
+  padding: 8px 24px 8px 10px;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.Articles-SortBy select:active,
+.Articles-SortBy select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.Articles-SortBy::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  border-top: 5px solid #aaa;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.SortBy-Button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  padding: 7px 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.SortBy-Submit {
+  border: 2px solid #aaa;
+  z-index: 1;
+  color: black;
+}
+
+.SortBy-Submit:after {
+  border-radius: 20px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: #aaa;
+  transition: all 0.3s ease;
+}
+
+.SortBy-Submit:hover {
+  color: rgb(0, 0, 0);
+}
+
+.SortBy-Submit:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.btn-42:active {
+  top: 2px;
+}

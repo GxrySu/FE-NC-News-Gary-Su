@@ -8,9 +8,11 @@ const Articles = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [sortByInput, setSortByInput] = useState(null);
   const [sortBy, setSortBy] = useState(null);
+  const [selected, setSelected] = useState(true);
 
   const handleChange = (event) => {
     setSortByInput(event.target.value);
+    setSelected(false);
   };
 
   const handleSortBySubmit = (event) => {
@@ -22,6 +24,7 @@ const Articles = () => {
   };
 
   useEffect(() => {
+    setSelected(true)
     setIsLoading(true);
     fetchArticles(sortBy).then((articleList) => {
       setArticles(articleList);
@@ -33,7 +36,6 @@ const Articles = () => {
     <div className="ArticlesList">
       <h2>List of Articles</h2>
       <div className="Articles-SortBy">
-        <label>Sort By: </label>
         <select
           id="sortBy"
           className="SortBy"
@@ -49,8 +51,17 @@ const Articles = () => {
           <option value="created_at">Date</option>
           <option value="votes">Votes</option>
         </select>
-        <button onClick={handleSortBySubmit}>Sort</button>
       </div>
+      {selected ? (
+        <p></p>
+      ) : (
+        <button
+          className="SortBy-Button SortBy-Submit"
+          onClick={handleSortBySubmit}
+        >
+          Submit
+        </button>
+      )}
       {isLoading ? (
         <h3>Loading Articles...</h3>
       ) : (
