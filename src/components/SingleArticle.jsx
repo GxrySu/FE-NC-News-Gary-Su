@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchArticleById, fetchCommentsByArticleId } from "../fetch-api";
 import { patchVotes } from "../fetch-api";
+import CommentAdder from "./CommentAdder";
 import CommentCard from "./CommentCard";
 
 const SingleArticle = () => {
@@ -86,6 +87,7 @@ const SingleArticle = () => {
                 })
               )}
             </article>
+            <CommentAdder article_id={article_id}/>
           </section>
         </>
       )}
