@@ -87,8 +87,8 @@ const SingleArticle = () => {
                 })
               )}
             </article>
-            <CommentAdder article_id={article_id}/>
           </section>
+          <CommentAdder article_id={article_id} />
         </>
       )}
     </div>

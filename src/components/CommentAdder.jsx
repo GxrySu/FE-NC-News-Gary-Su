@@ -23,23 +23,33 @@ const CommentAdder = ({ article_id }) => {
     setCommentInput("");
   };
 
-  if (commentPosted) return <h3>Comment has been posted!</h3>;
+  if (commentPosted)
+    return (
+      <form className="CommentAdder-Form">
+        {" "}
+        <fieldset className="CommentAdder-Fieldset">
+          <legend>Add Comment</legend>
+          <h3>Comment has been posted!</h3>
+        </fieldset>
+      </form>
+    );
   return (
-    <form onSubmit={handleSubmit}>
-      <fieldset>
+    <form className="CommentAdder-Form" onSubmit={handleSubmit}>
+      <fieldset className="CommentAdder-Fieldset">
         <legend>Add Comment</legend>
         <textarea
           required
           id="Comment"
-          className="Comment-Textbox"
+          className="CommentAdder-Textbox"
           placeholder="Enter text here..."
           value={commentInput}
           onChange={(event) => {
             setCommentInput(event.target.value);
           }}
         ></textarea>
-        <button type="submit" className="Comment-Submit">
-          Add Comment
+        <br />
+        <button type="submit" className="CommentAdder-Button CommentAdder-Submit">
+          Comment
         </button>
       </fieldset>
     </form>
