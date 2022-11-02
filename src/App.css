@@ -227,3 +227,29 @@ h3 {
   background: #333333;
   color: #ffffff;
 }
+
+.Comments-Section {
+  margin-top: 100px;
+}
+
+.Comments {
+  text-align: left;
+  padding: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 0%;
+  text-align: left;
+  width: auto;
+  height: 500px;
+  overflow: auto;
+}
+
+.CommentCard {
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: -35px;
+}
+
+.CommentCard legend {
+  font-weight: bold;
+}

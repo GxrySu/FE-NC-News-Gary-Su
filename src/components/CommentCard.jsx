@@ -1,9 +1,10 @@
 const CommentCard = ({ comment }) => {
   return (
-    <main className="CommentCard">
-      <dt>{comment.author} :</dt>
-      <dd>{comment.body}</dd>
-    </main>
+    <fieldset className="CommentCard">
+      <legend>{comment.author} :</legend>
+      <p>{comment.body}</p>
+    </fieldset>
+
   );
 };
 

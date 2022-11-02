@@ -68,9 +68,9 @@ const SingleArticle = () => {
               </li>
             </ul>
           </main>
-          <section className="Comment-Section">
+          <section className="Comments-Section">
             <h3>Comments:</h3>
-            <dl>
+            <article className="Comments">
               {commentsLoading ? (
                 <h4>Loading comments...</h4>
               ) : (
@@ -83,7 +83,7 @@ const SingleArticle = () => {
                   );
                 })
               )}
-            </dl>
+            </article>
           </section>
         </>
       )}
