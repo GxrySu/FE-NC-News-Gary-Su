@@ -73,6 +73,8 @@ const SingleArticle = () => {
             <article className="Comments">
               {commentsLoading ? (
                 <h4>Loading comments...</h4>
+              ) : comments.length === 0 ? (
+                <h4>No Comments</h4>
               ) : (
                 comments.map((comment) => {
                   return (
