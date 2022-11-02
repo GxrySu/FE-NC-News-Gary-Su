@@ -41,3 +41,15 @@ export const patchVotes = (article_id) => {
       return res.data;
     });
 };
+
+export const postCommentsByArticleId = (article_id, comment) => {
+  const newComment = {
+    username: comment.username,
+    body: comment.body
+  }
+  return myApi
+    .post(`/articles/${article_id}/comments`, newComment)
+    .then((res) => {
+      return res.data;
+    });
+};
