@@ -253,3 +253,13 @@ h3 {
 .CommentCard legend {
   font-weight: bold;
 }
+
+.Comment-Votes {
+  margin: 10px;
+  float: left;
+}
+
+.Comment-Date {
+  margin: 10px;
+  float: right;
+}
