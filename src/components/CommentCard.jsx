@@ -33,6 +33,7 @@ const CommentCard = ({ comment }) => {
       </i>
       {comment.author === user ? (
         <button
+          className="DeleteComment-Submit DeleteComment-Button"
           onClick={() => {
             removeComment();
           }}

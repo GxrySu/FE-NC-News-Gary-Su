@@ -71,7 +71,7 @@ h3 {
 }
 
 .SignIn li::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -82,7 +82,7 @@ h3 {
   transition: opacity 300ms, transform 300ms;
 }
 
-.SignIn li:hover::after, 
+.SignIn li:hover::after,
 .SignIn li:focus::after {
   opacity: 1;
   transform: translate3d(0, 0.2em, 0);
@@ -275,10 +275,6 @@ h3 {
   margin-top: 100px;
 }
 
-.DeletedComment {
-  text-align: center;
-}
-
 .Comments {
   text-align: left;
   padding: 50px;
@@ -293,9 +289,60 @@ h3 {
 }
 
 .CommentCard {
+  position: relative;
   text-align: left;
-  margin-top: 50px;
-  margin-bottom: -35px;
+  padding: 30px;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+
+.DeletedComment {
+  display: flex;
+  text-align: center;
+}
+
+.DeleteComment-Submit {
+  margin: 10px;
+  padding: 3px 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+}
+
+.DeleteComment-Button {
+  border: 2px solid lightgrey;
+  z-index: 1;
+  color: black;
+}
+
+.DeleteComment-Button:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: lightgrey;
+  transition: all 0.3s ease;
+}
+
+.DeleteComment-Button:hover {
+  color: lightcoral;
+}
+
+.DeleteComment-Button:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
 }
 
 .CommentCard legend {
@@ -402,6 +449,36 @@ h3 {
   display: inline-block;
 }
 
+.CommentAdder-Button {
+  border: 2px solid lightgray;
+  z-index: 1;
+  color: black;
+}
+.CommentAdder-Button:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: lightgray;
+  transition: all 0.3s;
+}
+
+.CommentAdder-Button:hover {
+  color: lightcoral;
+}
+
+.CommentAdder-Button:hover:after {
+  top: 0;
+  height: 100%;
+}
+
+.CommentAdder-Button:active {
+  top: 2px;
+}
+
 .SortBy-Submit {
   margin: 10px;
   padding: 7px 15px;
@@ -445,35 +522,5 @@ h3 {
 }
 
 .SortBy-Button:active {
-  top: 2px;
-}
-
-.CommentAdder-Button {
-  border: 2px solid lightgray;
-  z-index: 1;
-  color: black;
-}
-.CommentAdder-Button:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  background: lightgray;
-  transition: all 0.3s ;
-}
-
-.CommentAdder-Button:hover {
-  color: lightcoral;
-}
-
-.CommentAdder-Button:hover:after {
-  top: 0;
-  height: 100%;
-}
-
-.CommentAdder-Button:active {
   top: 2px;
 }
