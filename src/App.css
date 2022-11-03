@@ -89,9 +89,15 @@ h3 {
 }
 
 .SignedInAs {
+  font-family:Georgia, 'Times New Roman', Times, serif;
   position: absolute;
   top: 1%;
   right: 1%;
+}
+
+.SignedInAs span {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
 }
 
 .ArticleLink:after {
