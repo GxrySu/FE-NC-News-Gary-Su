@@ -1,11 +1,21 @@
-import {  useContext } from "react"
-import { UserContext } from "../context/UserContext"
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
 
 const SignedInAs = () => {
+  const { user, setUser } = useContext(UserContext);
 
-    const { user } = useContext(UserContext)
+  return (
+    <div className="SignedInAs">
+      <p>signed in as: {user}</p>
+      <button
+        onClick={() => {
+          setUser(null);
+        }}
+      >
+        sign out
+      </button>
+    </div>
+  );
+};
 
-    return <div className="SignedInAs">signed in as: {user}</div>
-}
-
-export default SignedInAs
+export default SignedInAs;
