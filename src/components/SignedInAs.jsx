@@ -5,7 +5,7 @@ const SignedInAs = () => {
 
     const { user } = useContext(UserContext)
 
-    return <footer className="SignedInAs">signed in as: {user}</footer>
+    return <div className="SignedInAs">signed in as: {user}</div>
 }
 
 export default SignedInAs
