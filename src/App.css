@@ -71,7 +71,7 @@ h3 {
 }
 
 .SignIn li::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -82,21 +82,21 @@ h3 {
   transition: opacity 300ms, transform 300ms;
 }
 
-.SignIn li:hover::after, 
+.SignIn li:hover::after,
 .SignIn li:focus::after {
   opacity: 1;
   transform: translate3d(0, 0.2em, 0);
 }
 
 .SignedInAs {
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   position: absolute;
   top: 1%;
   right: 1%;
 }
 
 .SignedInAs span {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: bold;
 }
 
@@ -119,6 +119,7 @@ h3 {
 }
 
 .ArticleCard {
+  display: flexbox;
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 50px;
@@ -132,14 +133,15 @@ h3 {
 
 .Articles {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 700px;
+  grid-template-columns: auto auto auto;
+  width: 80%;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   gap: 10px;
 }
 
 .Articles p {
+  position: inherit;
   border: 2px solid rgb(79, 185, 227);
   padding: 10px;
   margin: 10px;
@@ -295,9 +297,84 @@ h3 {
 }
 
 .CommentCard {
+  position: relative;
   text-align: left;
-  margin-top: 50px;
-  margin-bottom: -35px;
+  padding: 30px;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+
+.DeletedComment {
+  display: flex;
+  text-align: center;
+}
+
+.DeleteComment-Submit {
+  margin: 10px;
+  padding: 3px 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+}
+
+.DeleteComment-Button {
+  border: 2px solid lightgrey;
+  z-index: 1;
+  color: black;
+}
+
+.DeleteComment-Button:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: #f62217;
+  transition: all 0.3s ease;
+}
+
+.DeleteComment-Button:hover {
+  color: black;
+  animation: shake 0.52s cubic-bezier(0.26, 0.02, 0.09, 0.47) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+
+.DeleteComment-Button:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
 }
 
 .CommentCard legend {
@@ -404,6 +481,36 @@ h3 {
   display: inline-block;
 }
 
+.CommentAdder-Button {
+  border: 2px solid lightgray;
+  z-index: 1;
+  color: black;
+}
+.CommentAdder-Button:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: lightgray;
+  transition: all 0.3s;
+}
+
+.CommentAdder-Button:hover {
+  color: lightcoral;
+}
+
+.CommentAdder-Button:hover:after {
+  top: 0;
+  height: 100%;
+}
+
+.CommentAdder-Button:active {
+  top: 2px;
+}
+
 .SortBy-Submit {
   margin: 10px;
   padding: 7px 15px;
@@ -447,35 +554,5 @@ h3 {
 }
 
 .SortBy-Button:active {
-  top: 2px;
-}
-
-.CommentAdder-Button {
-  border: 2px solid lightgray;
-  z-index: 1;
-  color: black;
-}
-.CommentAdder-Button:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  background: lightgray;
-  transition: all 0.3s ;
-}
-
-.CommentAdder-Button:hover {
-  color: lightcoral;
-}
-
-.CommentAdder-Button:hover:after {
-  top: 0;
-  height: 100%;
-}
-
-.CommentAdder-Button:active {
   top: 2px;
 }

@@ -13,6 +13,7 @@ import SingleArticle from "./components/SingleArticle";
 import SignedInAs from "./components/SignedInAs";
 
 function App() {
+  
   const [user, setUser] = useState(null);
 
   return (
