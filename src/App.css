@@ -89,14 +89,14 @@ h3 {
 }
 
 .SignedInAs {
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   position: absolute;
   top: 1%;
   right: 1%;
 }
 
 .SignedInAs span {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: bold;
 }
 
@@ -119,6 +119,7 @@ h3 {
 }
 
 .ArticleCard {
+  display: flexbox;
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 50px;
@@ -132,14 +133,15 @@ h3 {
 
 .Articles {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 700px;
+  grid-template-columns: auto auto auto;
+  width: auto;
   margin: 0 auto;
   margin-bottom: 10px;
   gap: 10px;
 }
 
 .Articles p {
+  position: inherit;
   border: 2px solid rgb(79, 185, 227);
   padding: 10px;
   margin: 10px;
@@ -337,31 +339,36 @@ h3 {
   left: 0;
   direction: rtl;
   z-index: -1;
-  background: #F62217;
+  background: #f62217;
   transition: all 0.3s ease;
 }
 
 .DeleteComment-Button:hover {
   color: black;
-  animation: shake 0.52s cubic-bezier(.26,.02,.09,.47) both;
+  animation: shake 0.52s cubic-bezier(0.26, 0.02, 0.09, 0.47) both;
   transform: translate3d(0, 0, 0);
   perspective: 1000px;
 }
 
 @keyframes shake {
-  10%, 90% {
+  10%,
+  90% {
     transform: translate3d(-1px, 0, 0);
   }
-  20%, 80% {
+  20%,
+  80% {
     transform: translate3d(2px, 0, 0);
   }
-  
-  30%, 50%, 70% {
+
+  30%,
+  50%,
+  70% {
     transform: translate3d(-2px, 0, 0);
   }
-  40%, 60% {
+  40%,
+  60% {
     transform: translate3d(2px, 0, 0);
-}
+  }
 }
 
 .DeleteComment-Button:hover:after {
