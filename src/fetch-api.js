@@ -16,10 +16,16 @@ export const fetchUsers = () => {
   });
 };
 
-export const fetchArticles = () => {
-  return myApi.get("/articles").then((res) => {
-    return res.data;
-  });
+export const fetchArticles = (sortBy) => {
+  if (!sortBy) {
+    return myApi.get("/articles").then((res) => {
+      return res.data;
+    });
+  } else {
+    return myApi.get(`/articles?sort_by=${sortBy}`).then((res) => {
+      return res.data;
+    });
+  }
 };
 
 export const fetchTopics = () => {
