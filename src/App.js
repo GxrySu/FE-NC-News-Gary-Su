@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useLocalStorage } from "./components/localStorage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { UserContext } from "./context/UserContext";
 import SignIn from "./components/SignIn";
@@ -14,7 +14,7 @@ import SignedInAs from "./components/SignedInAs";
 
 function App() {
   
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useLocalStorage("user", null)
 
   return (
     <BrowserRouter>

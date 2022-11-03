@@ -18,7 +18,7 @@ const SignIn = () => {
 
   return (
     <>
-    <h1>Sign In</h1>
+      <h1>Sign In</h1>
       <div className="SignIn">
         <ul>
           {isLoading ? (
@@ -27,11 +27,13 @@ const SignIn = () => {
             signInList.map((user) => {
               return (
                 <li
+                  className="SignIn-User"
                   key={user.username}
                   onClick={() => {
                     setUser(user.username);
                   }}
                 >
+                  <img className="SignIn-Avatar" src={user.avatar_url} alt="User Avatar"></img>
                   {user.username}
                 </li>
               );
