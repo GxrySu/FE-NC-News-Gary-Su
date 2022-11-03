@@ -8,9 +8,11 @@ const CommentCard = ({ comment }) => {
   const [currComment, setCurrentComment] = useState(comment);
 
   const removeComment = () => {
-    deleteCommentByCommentId(comment.comment_id).then((res) => {
-      setCurrentComment(null);
-    });
+    deleteCommentByCommentId(comment.comment_id)
+      .then((res) => {
+        setCurrentComment(null);
+      })
+      .catch((err) => {});
   };
 
   if (!currComment) {
