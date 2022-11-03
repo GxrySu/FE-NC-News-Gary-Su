@@ -312,12 +312,6 @@ h3 {
   border-left: 5px solid transparent;
 }
 
-.SortBy-Button {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 20px;
-  padding: 7px 15px;
-  font-family: "Roboto", sans-serif;
 .CommentAdder-Textbox {
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
@@ -346,35 +340,13 @@ h3 {
   margin: 10px;
 }
 
-/* .CommentAdder-Button {
-  display: inline-block;
-  padding: 0.65em 1.6em;
-  border: 3px solid lightgrey;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.12em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: black;
-  text-align: center;
-  transition: all 0.2s;
-  animation: bn13bouncy 5s infinite linear;
-  position: relative;
-}
-
-.CommentAdder-Button:hover {
-  border: 3px solid black;
-  color: black;
-} */
-
 .CommentAdder-Submit {
   margin-top: 10px;
   padding: 7px 25px;
-  font-size:medium;
+  font-size: medium;
   font-weight: bolder;
   font-style: italic;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 500;
   background: transparent;
   outline: none !important;
@@ -385,13 +357,25 @@ h3 {
 }
 
 .SortBy-Submit {
-  border: 2px solid #aaa;
+  margin: 10px;
+  padding: 7px 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.SortBy-Button {
+  border: 2px solid lightgrey;
   z-index: 1;
   color: black;
 }
 
-.SortBy-Submit:after {
-  border-radius: 20px;
+.SortBy-Button:after {
   position: absolute;
   content: "";
   width: 0;
@@ -400,21 +384,24 @@ h3 {
   left: 0;
   direction: rtl;
   z-index: -1;
-  background: #aaa;
+  background: lightgrey;
   transition: all 0.3s ease;
 }
 
-.SortBy-Submit:hover {
-  color: rgb(0, 0, 0);
+.SortBy-Button:hover {
+  color: lightcoral;
 }
 
-.SortBy-Submit:hover:after {
+.SortBy-Button:hover:after {
   left: auto;
   right: 0;
   width: 100%;
 }
 
-.btn-42:active {
+.SortBy-Button:active {
+  top: 2px;
+}
+
 .CommentAdder-Button {
   border: 2px solid lightgray;
   z-index: 1;
@@ -429,7 +416,7 @@ h3 {
   left: 0;
   z-index: -1;
   background: lightgray;
-  transition: all 0.3s ease;
+  transition: all 0.3s ;
 }
 
 .CommentAdder-Button:hover {
