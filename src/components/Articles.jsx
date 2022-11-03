@@ -1,4 +1,3 @@
-import { setSelectionRange } from "@testing-library/user-event/dist/utils";
 import { useState, useEffect } from "react";
 import { fetchArticles } from "../fetch-api";
 import ArticleCard from "./ArticleCard";
