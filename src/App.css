@@ -52,6 +52,42 @@ h3 {
   color: #444;
 }
 
+.SignIn ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 50px;
+  list-style: none;
+}
+
+.SignIn li {
+  color: grey;
+  margin: 0 2rem;
+  display: block;
+  position: relative;
+  padding: 0.2em 0;
+  cursor: pointer;
+}
+
+.SignIn li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: lightcoral;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+.SignIn li:hover::after, 
+.SignIn li:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
 .ArticleLink:after {
   content: "";
   position: absolute;

@@ -17,26 +17,29 @@ const SignIn = () => {
   const { setUser } = useContext(UserContext);
 
   return (
-    <div>
-      <ul>
-        {isLoading ? (
-          <h2>Loading Users...</h2>
-        ) : (
-          signInList.map((user) => {
-            return (
-              <li
-                key={user.username}
-                onClick={() => {
-                  setUser(user.username);
-                }}
-              >
-                {user.username}
-              </li>
-            );
-          })
-        )}
-      </ul>
-    </div>
+    <>
+    <h1>Sign In</h1>
+      <div className="SignIn">
+        <ul>
+          {isLoading ? (
+            <h2>Loading Users...</h2>
+          ) : (
+            signInList.map((user) => {
+              return (
+                <li
+                  key={user.username}
+                  onClick={() => {
+                    setUser(user.username);
+                  }}
+                >
+                  {user.username}
+                </li>
+              );
+            })
+          )}
+        </ul>
+      </div>
+    </>
   );
 };
 
