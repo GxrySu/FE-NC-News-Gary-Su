@@ -33,7 +33,12 @@ const SignIn = () => {
                     setUser(user.username);
                   }}
                 >
-                  <img className="SignIn-Avatar" src={user.avatar_url} alt="User Avatar"></img>
+                  <img
+                    className="SignIn-Avatar"
+                    src={user.avatar_url}
+                    alt="User Avatar"
+                  ></img>
+                  <br />
                   {user.username}
                 </li>
               );
