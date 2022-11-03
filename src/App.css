@@ -88,6 +88,12 @@ h3 {
   transform: translate3d(0, 0.2em, 0);
 }
 
+.SignedInAs {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+
 .ArticleLink:after {
   content: "";
   position: absolute;
