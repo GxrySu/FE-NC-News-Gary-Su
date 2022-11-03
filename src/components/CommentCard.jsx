@@ -1,12 +1,40 @@
+import { useState } from "react";
+import { deleteCommentByCommentId } from "../fetch-api";
+
 const CommentCard = ({ comment }) => {
+  const [currComment, setCurrentComment] = useState(comment);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const removeComment = () => {
+    deleteCommentByCommentId(comment.comment_id).then((res) => {
+      setCurrentComment(null);
+    });
+  };
+  
+  if(!currComment) {
+    return <fieldset className="CommentCard">
+    <legend>{comment.author} :</legend>
+    <p className="DeletedComment">Comment Deleted</p>
+    <i className="Comment-Votes"></i>
+  </fieldset>
+  }
+
   return (
     <fieldset className="CommentCard">
       <legend>{comment.author} :</legend>
       <p>{comment.body}</p>
       <i className="Comment-Votes">Votes: {comment.votes}</i>
-      <i className="Comment-Date">Date: {comment.created_at.substring(0, 10)}</i>
+      <i className="Comment-Date">
+        Date: {comment.created_at.substring(0, 10)}
+      </i>
+      <button
+        onClick={() => {
+          removeComment();
+        }}
+      >
+        delete
+      </button>
     </fieldset>
-
   );
 };
 

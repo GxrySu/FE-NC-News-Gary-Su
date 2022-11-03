@@ -275,6 +275,10 @@ h3 {
   margin-top: 100px;
 }
 
+.DeletedComment {
+  text-align: center;
+}
+
 .Comments {
   text-align: left;
   padding: 50px;
