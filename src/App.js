@@ -11,6 +11,7 @@ import Topics from "./components/Topics";
 import ArticlesByTopic from "./components/ArticlesByTopic";
 import SingleArticle from "./components/SingleArticle";
 import SignedInAs from "./components/SignedInAs";
+import ErrorHandler from "./components/ErrorHandler";
 
 function App() {
   
@@ -38,6 +39,7 @@ function App() {
                   path="/articles/:article_id"
                   element={<SingleArticle />}
                 ></Route>
+                <Route path="*" element={<ErrorHandler />}></Route>
               </Routes>
               <SignedInAs />
             </>
