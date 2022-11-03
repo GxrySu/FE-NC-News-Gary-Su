@@ -337,12 +337,31 @@ h3 {
   left: 0;
   direction: rtl;
   z-index: -1;
-  background: lightgrey;
+  background: #F62217;
   transition: all 0.3s ease;
 }
 
 .DeleteComment-Button:hover {
-  color: lightcoral;
+  color: black;
+  animation: shake 0.52s cubic-bezier(.26,.02,.09,.47) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+}
 }
 
 .DeleteComment-Button:hover:after {
