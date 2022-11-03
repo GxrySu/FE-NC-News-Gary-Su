@@ -6,7 +6,7 @@ const SignedInAs = () => {
 
   return (
     <div className="SignedInAs">
-      <p>signed in as: {user}</p>
+      <p>signed in as: <span>{user}</span></p>
       <button
         onClick={() => {
           setUser(null);
