@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchArticles } from "../fetch-api";
+import ErrorHandler from "./ErrorHandler";
 
 const ArticlesByTopic = () => {
   const { topic } = useParams();
@@ -20,6 +21,9 @@ const ArticlesByTopic = () => {
     (article) => article.topic === topic
   );
 
+  if(filteredArticles.length === 0) {
+    return <ErrorHandler />
+  }
   return (
     <div>
       <h2>Articles about {myTopic}</h2>
