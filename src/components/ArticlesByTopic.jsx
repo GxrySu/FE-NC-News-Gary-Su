@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchArticles } from "../fetch-api";
 import ErrorHandler from "./ErrorHandler";
+import Loading from "./Loading";
 
 const ArticlesByTopic = () => {
   const { topic } = useParams();
@@ -25,7 +26,7 @@ const ArticlesByTopic = () => {
     <div>
       <h2>Articles about {myTopic}</h2>
       {isLoading ? (
-        <h3>Loading Articles...</h3>
+        <Loading />
       ) : (
         filteredArticles.map((article) => {
           return filteredArticles.length === 0 ? (

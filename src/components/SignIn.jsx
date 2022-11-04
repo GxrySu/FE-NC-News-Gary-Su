@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../context/UserContext";
 import { fetchUsers } from "../fetch-api";
+import Loading from "./Loading";
 
 const SignIn = () => {
   const [signInList, setSignInList] = useState([]);
@@ -22,7 +23,7 @@ const SignIn = () => {
       <div className="SignIn">
         <ul>
           {isLoading ? (
-            <h2>Loading Users...</h2>
+            <Loading />
           ) : (
             signInList.map((user) => {
               return (

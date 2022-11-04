@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchTopics } from "../fetch-api";
 import { Link } from "react-router-dom";
+import Loading from "./Loading";
 
 const Topics = () => {
   const [topics, setTopics] = useState([]);
@@ -19,7 +20,7 @@ const Topics = () => {
       <h2>List of Topics</h2>
       <>
         {isLoading ? (
-          <h3>Loading Topics</h3>
+          <Loading />
         ) : (
           topics.map((topic) => {
             return (

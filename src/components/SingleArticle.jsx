@@ -5,6 +5,7 @@ import { patchVotes } from "../fetch-api";
 import CommentAdder from "./CommentAdder";
 import CommentCard from "./CommentCard";
 import ErrorHandler from "./ErrorHandler"
+import Loading from "./Loading";
 
 const SingleArticle = () => {
   const { article_id } = useParams();
@@ -57,7 +58,7 @@ const SingleArticle = () => {
   return (
     <div className="SingleArticle">
       {isLoading ? (
-        <h2>Loading Article...</h2>
+        <Loading />
       ) : (
         <>
           <main className="Article">
