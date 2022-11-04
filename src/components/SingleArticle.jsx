@@ -4,6 +4,7 @@ import { fetchArticleById, fetchCommentsByArticleId } from "../fetch-api";
 import { patchVotes } from "../fetch-api";
 import CommentAdder from "./CommentAdder";
 import CommentCard from "./CommentCard";
+import ErrorHandler from "./ErrorHandler"
 
 const SingleArticle = () => {
   const { article_id } = useParams();
@@ -13,14 +14,22 @@ const SingleArticle = () => {
   const [commentsLoading, setCommentsLoading] = useState(true);
   const [voteStatus, setVoteStatus] = useState("Like");
   const [incVotes, setIncVotes] = useState(0);
+  const [error, setError] = useState(null)
 
   useEffect(() => {
+    setError(null)
     setIsLoading(true);
     setCommentsLoading(true);
     fetchArticleById(article_id).then((articleData) => {
       setArticle(articleData);
       setIsLoading(false);
-    });
+    }).catch((err) => {
+      const newError = {
+        message: err.response.data.msg,
+        status: err.response.status
+      }
+      setError(newError)
+    })
     fetchCommentsByArticleId(article_id).then((commentData) => {
       setComments(commentData);
       setCommentsLoading(false);
@@ -42,6 +51,9 @@ const SingleArticle = () => {
     }
   };
 
+  if(error !== null) {
+    return <ErrorHandler error={error}/>
+  }
   return (
     <div className="SingleArticle">
       {isLoading ? (
