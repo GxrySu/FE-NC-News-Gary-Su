@@ -4,11 +4,16 @@
 
 **Hosted App can be viewed** **_[HERE](https://fe-nc-news-gary-80yfrpoiy-gxrysu.vercel.app/)_**
 
-## Summary
+## About App
 
 This is a React App called FE-NC-News-Gary-Su.
 
-This app displays articles for NC News, the user is able to navigate with the navigation bar to the Home, Articles and Topics page.
+Utilising the API calls: GET, POST, PATCH and DELETE we are able to add functionailty to the app.
+To get the data we use HTTP request to interact with the back end of this project which allows the app to display all the data for NC News, the user is able to navigate with the navigation bar to the Home, Articles and Topics page.
+
+Before you can access all the pages you must login in and once you've logged in you can vote, sort articles, add comment and delete comments.
+
+You can also check out the backend for this project [HERE](https://github.com/GxrySu/BE-NC-News-Gary-Su)
 
 **Styled With CSS & HTML**
 
@@ -44,8 +49,6 @@ Get started by forking and cloning the repository from https://github.com/GxrySu
     $ npm run build
 
     $ npm start
-
-You can also check out the backend for this project [HERE](https://github.com/GxrySu/BE-NC-News-Gary-Su)
 
 #### NODE MODULES USED:
 
