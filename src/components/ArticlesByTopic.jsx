@@ -21,9 +21,6 @@ const ArticlesByTopic = () => {
     (article) => article.topic === topic
   );
 
-  if(filteredArticles.length === 0) {
-    return <ErrorHandler />
-  }
   return (
     <div>
       <h2>Articles about {myTopic}</h2>
@@ -31,9 +28,16 @@ const ArticlesByTopic = () => {
         <h3>Loading Articles...</h3>
       ) : (
         filteredArticles.map((article) => {
-          return (
+          return filteredArticles.length === 0 ? (
+            <ErrorHandler />
+          ) : (
             <div key={article.article_id}>
-              <Link className="ArticleLink" to={`/articles/${article.article_id}`}><h3>{article.title}</h3></Link>
+              <Link
+                className="ArticleLink"
+                to={`/articles/${article.article_id}`}
+              >
+                <h3>{article.title}</h3>
+              </Link>
               <p>Topic: {myTopic}</p>
               <p>
                 Author: <span>{article.author}</span>
