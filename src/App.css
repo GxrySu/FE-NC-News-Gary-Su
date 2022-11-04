@@ -16,6 +16,7 @@ h3 {
   font-style: italic;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
+
 .nav {
   float: center;
 }
@@ -50,6 +51,27 @@ h3 {
   display: inline-block;
   position: relative;
   color: #444;
+}
+
+.SignIn {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.SignIn-User {
+  display: flexbox;
+}
+
+.SignIn-Avatar {
+  border: 2px solid lightcoral;
+  border-radius: 50%;
+  max-height: 100px;
+  max-width: 50%;
+  vertical-align: middle;
 }
 
 .SignIn ul {
