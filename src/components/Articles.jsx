@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchArticles } from "../fetch-api";
 import ArticleCard from "./ArticleCard";
+import Loading from "./Loading"
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -62,7 +63,7 @@ const Articles = () => {
         </button>
       )}
       {isLoading ? (
-        <h3>Loading Articles...</h3>
+        <Loading />
       ) : (
         articles.map((article) => {
           return <ArticleCard key={article.article_id} article={article} />;
