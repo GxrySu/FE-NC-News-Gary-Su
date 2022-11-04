@@ -45,7 +45,8 @@ Get started by forking and cloning the repository from https://github.com/GxrySu
 
 You can also check out the backend for this project [HERE](https://github.com/GxrySu/BE-NC-News-Gary-Su)
 
-**NODE MODULES USED:** 
+#### NODE MODULES USED:
+
     - react
     - react-router-dom
     - axios
