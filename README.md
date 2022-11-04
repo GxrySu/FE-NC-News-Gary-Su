@@ -2,7 +2,7 @@
 
 ## View Deployed App:
 
-**Hosted App can be viewed** **_[HERE](https://fe-nc-news-gary-80yfrpoiy-gxrysu.vercel.app/)_**
+*Hosted App can be viewed* **_[here](https://fe-nc-news-gary-80yfrpoiy-gxrysu.vercel.app/)_**
 
 ## About App
 
