@@ -41,6 +41,8 @@ Get started by forking and cloning the repository from https://github.com/GxrySu
     $ npm install (install all dependencies)
     ---Current Node version: v19.0.0---
 
+    $ npm run build
+
     $ npm start
 
 You can also check out the backend for this project [HERE](https://github.com/GxrySu/BE-NC-News-Gary-Su)
