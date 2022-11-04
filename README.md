@@ -1,9 +1,5 @@
 # NC NEWS
 
-## View Deployed App:
-
-*Hosted App can be viewed* **_[here](https://fe-nc-news-gary-80yfrpoiy-gxrysu.vercel.app/)_**
-
 ## About App
 
 This is a React App called FE-NC-News-Gary-Su.
@@ -37,6 +33,8 @@ You can also check out the backend for this project [HERE](https://github.com/Gx
 - _User can up vote article_
 - _User can comment on the article and delete comments created by the user_
 
+
+
 ## Hosting on local server
 
 Get started by forking and cloning the repository from https://github.com/GxrySu/BE-NC-News-Gary-Su
@@ -49,6 +47,10 @@ Get started by forking and cloning the repository from https://github.com/GxrySu
     $ npm run build
 
     $ npm start
+
+## View Deployed App:
+
+*Hosted App can be viewed* **_[here](https://fe-nc-news-gary-80yfrpoiy-gxrysu.vercel.app/)_**
 
 #### NODE MODULES USED:
 
