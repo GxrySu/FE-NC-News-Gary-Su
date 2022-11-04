@@ -17,6 +17,8 @@ function App() {
   
   const [user, setUser] = useLocalStorage("user", null)
 
+  console.log(user)
+
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ user, setUser }}>
