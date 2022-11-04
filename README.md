@@ -48,7 +48,7 @@ Get started by forking and cloning the repository from https://github.com/GxrySu
 
     $ npm start
 
-## View Deployed App:
+## View Deployed App
 
 *Hosted App can be viewed* **_[here](https://fe-nc-news-gary-80yfrpoiy-gxrysu.vercel.app/)_**
 
