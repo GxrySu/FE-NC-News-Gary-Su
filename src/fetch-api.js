@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const myApi = axios.create({
-  baseURL: "https://nc-news-garys.herokuapp.com/api",
+  baseURL: "https://drab-pink-katydid-kit.cyclic.app/api",
 });
 
 export const fetchEndpoints = () => {
