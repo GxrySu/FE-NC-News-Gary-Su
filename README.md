@@ -50,7 +50,7 @@ Get started by forking and cloning the repository from https://github.com/GxrySu
 
 ## View Deployed App
 
-*Hosted App can be viewed* **_[here](https://fe-nc-news-gary-80yfrpoiy-gxrysu.vercel.app/)_**
+*Hosted App can be viewed* **_[here](https://fe-nc-news-gary-su.vercel.app/)_**
 
 #### NODE MODULES USED:
 
